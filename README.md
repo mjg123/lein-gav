@@ -47,6 +47,10 @@ created the dirs `com`, `com/example` and `com/example/myproject`.
 
 ...etc. This works in bash and zsh at least.
 
+### Extra output getting in the way?
+
+Best to use lein once before, at least `lein deps`, to avoid having
+output from other parts of lein affecting the output here.
 
 ## License
 

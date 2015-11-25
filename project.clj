@@ -1,4 +1,4 @@
-(defproject lein-gav "1.0.0"
+(defproject lein-gav "1.0.1-SNAPSHOT"
   :description "Leiningen plugin for printing projects' maven coordinates"
   :url "http://github.com/mjg123/lein-gav"
   :license {:name "Eclipse Public License"
