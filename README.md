@@ -9,30 +9,43 @@ etc. It's always fiddly so I thought I'd write a short plugin to do it.
 
 Put `[lein-gav "1.0.0"]` into the `:plugins` vector of your project.clj.
 
-### Default output:
+### Default output
 
 group-id
 artefact-id
 version 
+
+for example:
 
     $ lein gav
     com.example
     myproject
     0.0.1-SNAPSHOT
 
-Specifying the format:
+### Specifying the format
 
     $ lein gav "** {g} **\n-- {a} --\n__ {v} __"
     ** com.example **
     -- myproject --
     __ 0.0.1-SNAPSHOT __
 
-Slash-separated group-id might be useful for making things which are
+
+### Slash-separated group-id
+
+Might be useful for making things which are
 shaped like maven repositories:
 
-    $ mkdir -p $(lein gav 'gs')
+    $ mkdir -p $(lein gav '{gs}/{a}')
 
-created the dirs com and com/example.
+created the dirs `com`, `com/example` and `com/example/myproject`.
+
+### Assigning to shell vars
+
+    $ read G A V <<< $(lein gav '{g} {a} {v}')
+    $ echo $G
+    com.example
+
+...etc. This works in bash and zsh at least.
 
 
 ## License
