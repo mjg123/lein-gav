@@ -1,6 +1,6 @@
 # gav
 
-A Leiningen plugin to do print the maven group/artifact id and version.
+A Leiningen plugin to print the maven group/artifact id and version.
 
 I've needed to grab these a few times for build-scripts, jenkins jobs,
 etc. It's always fiddly so I thought I'd write a short plugin to do it.
